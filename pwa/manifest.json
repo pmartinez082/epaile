@@ -1,0 +1,29 @@
+{
+  "name": "Putxerapp_epaile",
+  "short_name": "Putxepaile",
+  "description": "",
+  "orientation": "any",
+  
+  "icons": [
+    {
+      "src": "/icons/putxera.jpg",
+      "type": "image/jpg",
+      "sizes": "868x868"
+    },
+
+    {
+
+      "src": "/icons/putxera.png",
+      "type": "image/png",
+      "sizes": "868x868"
+    }
+  ],
+  
+  "id": "/",
+  "start_url": "/",
+  "theme_color": "#CCCCFF",
+  "background_color": "#ffffff",
+  "display": "standalone"
+
+  
+}

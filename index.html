@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="./pwa/manifest.json" />
+  
+  <title>saioa hasi</title>
+  <link rel="stylesheet" href = ./css/style.css> 
+    
+</head>
+
+
+<body>
+  <script type = "module">
+    import {login, toggleLogin} from '/js/app.js';
+    document.getElementById('authForm').addEventListener('submit', login);
+    document.getElementById('toggle-button').addEventListener('click', toggleLogin);
+  </script>
+  <div id = "logDiv" class = "login-container">
+    <h1 id="formTitle">Saioa hasi</h1>
+    <form id="authForm">
+
+       <input type = text id = username placeholder = "Erabiltzaile izena" required />
+     <input type="email" id="email" placeholder = "eposta kontua"  hidden />
+      <input type="password" id="password" placeholder="pasahitza" required  />
+        <button type="submit">Bidali</button>
+
+    </form>
+    <button id="toggle-button" >Ez duzu konturik? Erregistratu zaitez</button>
+  </div>
+
+
+ <!-- Register the app's service worker. -->
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register('/epaile/sw.js', { scope: '/epaile/' }).then(
+      (registration) => {
+        console.log("Service worker registration successful:", registration);
+      },
+      (error) => {
+        console.log(`Service worker registration failed: ${error}`);
+      }
+    );
+  }
+
+</script>
+
+
+</body>
+</html>

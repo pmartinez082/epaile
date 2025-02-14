@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/pwa/manifest.json" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Balorazioak</title>
+</head>
+<body >
+    <div class="back-container">
+        <form action="../">
+            <button type="submit"><img src="../pics/atzera.svg" alt="Atzera"></button>
+        </form>
+        <form action = "../epaile"><button type = "submit"><img src="../pics/birkargatu.svg" alt="Birkargatu"></button></form>
+    </div>
+
+    <script type="module">
+        import { ebaluazioaForm, ebaluazioaSortu } from '../js/epaile.js';
+        import { autentifikatu } from '../js/user.js';
+        document.addEventListener('DOMContentLoaded', async () => {
+          await autentifikatu(); 
+          const ebaluazioaButton = document.getElementById('ebaluazioaButton');
+      
+          if (ebaluazioaButton) {
+            ebaluazioaButton.addEventListener('click', async () => {
+              await ebaluazioaForm();
+            });
+          }
+        });
+      </script>
+      
+
+  <div id = "divBozkatu" >
+  <h2>Baloratzen hasi</h2>
+  <button  type="button" id="ebaluazioaButton" style = "background-color: transparent;"><img src="../pics/epaitu.svg"></button>
+</div>  
+  <div  id = "ebaluazioak" class="taulaDiv">
+    
+    <table id="ebaluazioaTaula" class = "taula" ></table>
+   
+    </div>
+   
+</body>
+
+</html>
