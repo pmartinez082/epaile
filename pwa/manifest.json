@@ -19,8 +19,8 @@
     }
   ],
   
-  "id": "/",
-  "start_url": "/",
+  "id": "/epaile",
+  "start_url": "/epaile/index.html",
   "theme_color": "#CCCCFF",
   "background_color": "#ffffff",
   "display": "standalone"
