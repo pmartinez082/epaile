@@ -15,7 +15,6 @@ const APP_STATIC_RESOURCES = [
   "/epaile/js/fasea.js",
   "/epaile/js/konstanteak.js",
   "/epaile/js/taldea.js",
-  "/epaile/js/txapelketa.js",
   "/epaile/js/user.js",
   "/epaile/pwa/manifest.json",
   "/epaile/sw.js",
