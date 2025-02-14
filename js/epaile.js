@@ -29,7 +29,7 @@ export async function ebaluazioaForm(){
     if (fase.length === 0) {
         const abisua = document.createElement('h1');
         const itxaron = document.createElement('img');
-        itxaron.src = "../../pics/itxaron.svg";
+        itxaron.src = "../pics/itxaron.svg";
         abisua.innerHTML = "Oraindik ez da fasea hasi";
         document.body.appendChild(abisua);
         document.body.appendChild(itxaron);
@@ -49,7 +49,7 @@ export async function ebaluazioaForm(){
 
       abisua.textContent = "Fase honetan ezin duzu bozkatu";
       const img = document.createElement('img');
-      img.src = "../../pics/debekatuta.svg";
+      img.src = "../pics/debekatuta.svg";
       img.alt = "Debekatuta";
       img.style.width = "200px";
       img.style.height = "200px";
