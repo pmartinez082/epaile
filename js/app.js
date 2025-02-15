@@ -75,7 +75,7 @@ export async function login(event) {
       const button = document.createElement('button');
       button.textContent = "Atzera";
       button.addEventListener('click', function(){
-          window.location.href = "../index.html";
+          window.location.href = "./index.html";
       });
       logDiv.innerHTML = '';
       logDiv.appendChild(mezua);
@@ -84,7 +84,7 @@ export async function login(event) {
         
   }
   else{
-      window.location.href = "/html/epaitu.html";
+      window.location.href = "./html/epaitu.html";
   }
   
  };
