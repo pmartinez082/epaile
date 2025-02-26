@@ -5,7 +5,9 @@ export const getEpaileak = async () => {
     try {
         const response = await fetch(`${API_URL}/user/role/epaileak`, {
             method: 'GET',
+            mode: 'cors',
             headers: {
+                'ngrok-skip-browser-warning': 'true',
                 'Content-Type': 'application/json',
             },
             
@@ -31,7 +33,9 @@ export const verifyUser = async () => {
     try {
         const response = await fetch(`${API_URL}/user/verify`, {
             method: 'POST',
+            mode: 'cors',
             headers: {
+                'ngrok-skip-browser-warning': 'true',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ username, password }),
@@ -54,7 +58,9 @@ export const findUser = async () => {
     try {
         const response = await fetch(`${API_URL}/user/find`, {
             method: 'POST',
+            mode: 'cors',
             headers: {
+                'ngrok-skip-browser-warning': 'true',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ username }),
@@ -81,7 +87,9 @@ export const getRole = async (user) => {
     try {
         const response = await fetch(`${API_URL}/user/role`, {
             method: 'POST',
+            mode: 'cors',
             headers: {
+                'ngrok-skip-browser-warning': 'true',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ username }),
@@ -105,7 +113,9 @@ export const createNewUser = async () => {
     try {
         const response = await fetch(`${API_URL}/user/add`, {
             method: 'POST',
+            mode: 'cors',
             headers: {
+                'ngrok-skip-browser-warning': 'true',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ username, email, password, role }),

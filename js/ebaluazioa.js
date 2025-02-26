@@ -1,5 +1,3 @@
-
-
 import {API_URL} from './konstanteak.js'
 import * as konstanteak from "./konstanteak.js";
 
@@ -65,7 +63,9 @@ export const createNewEbaluazioa = async (event) => {
     try {
         const response = await fetch(`${API_URL}/ebaluazioa/add`, {
             method: 'POST',
+            mode: 'cors',
             headers: {
+                'ngrok-skip-browser-warning': 'true',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
@@ -95,7 +95,9 @@ export const getEpailearenEbaluazioakFaseka = async (event) => {
     try {
         const response = await fetch(`${API_URL}/ebaluazioa/get/EpailearenEbaluazioakFaseka/${idEpaimahaikidea}`, {
             method: 'GET',
+            mode: 'cors',
             headers: {
+                'ngrok-skip-browser-warning': 'true',
                 'Content-Type': 'application/json',
             },
            
